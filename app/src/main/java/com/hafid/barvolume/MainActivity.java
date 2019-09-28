@@ -1,8 +1,10 @@
 package com.hafid.barvolume;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText edtPanjang, edtLebar, edtTinggi;
     Button btnHitung;
     TextView tvResult;
+    private static final String STATE_RESULT = "state_result";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //menambahkan fungsi btn saat di klik
         btnHitung.setOnClickListener(this);
 
+        if (savedInstanceState != null){
+            String result = savedInstanceState.getString(STATE_RESULT);
+            tvResult.setText(result);
+        }
 
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(STATE_RESULT, tvResult.getText().toString());
     }
 
     @Override
