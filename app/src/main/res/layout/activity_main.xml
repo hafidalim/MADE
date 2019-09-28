@@ -11,32 +11,36 @@
         android:id="@+id/edtPanjang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/masukan_panjang" />
+        android:hint="@string/masukan_panjang"
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/edtLebar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/masukan_lebar" />
+        android:hint="@string/masukan_lebar"
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/edtTinggi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/masukan_tinggi" />
+        android:hint="@string/masukan_tinggi"
+        android:inputType="number" />
 
     <Button
         android:id="@+id/btnHitung"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hitung" />
+
     <TextView
+        android:id="@+id/tvResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hasil"
         android:gravity="center"
-        android:textSize="18sp"
-        android:id="@+id/tvResult"/>
+        android:text="@string/hasil"
+        android:textSize="18sp" />
 
 
 </LinearLayout>
