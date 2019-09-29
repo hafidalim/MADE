@@ -15,11 +15,17 @@
         android:text="@string/pindah_activity" />
 
     <Button
+        android:id="@+id/btnmoveData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/pindah_dengan_activity_denga_data"
-        android:id="@+id/btnmoveData"/>
+        android:text="@string/pindah_dengan_activity_denga_data" />
+
+    <Button
+        android:id="@+id/btnMoveObject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/move_data_object" />
 
 
 </LinearLayout>

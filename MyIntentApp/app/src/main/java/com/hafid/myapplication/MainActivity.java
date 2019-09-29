@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnPindah, btnMoveData;
+    Button btnPindah, btnMoveData, btnMoveObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnMoveData = findViewById(R.id.btnmoveData);
         btnMoveData.setOnClickListener(this);
+
+        btnMoveObject = findViewById(R.id.btnMoveObject);
+        btnMoveObject.setOnClickListener(this);
 
     }
 
@@ -37,8 +40,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 moveData.putExtra(MoveWithDataActivity.EXTRA_NAME, "Hafid Ali Mustaqim");
                 moveData.putExtra(MoveWithDataActivity.EXTRA_AGE, 18);
                 startActivity(moveData);
+                break;
+            case R.id.btnMoveObject:
+                Person person = new Person();
+                person.setName("Hafid Ali Mustaqim");
+                person.setEmail("hafidd456@gmail.com");
+                person.setAge(18);
+                person.setCity("Banjarnegara");
 
-            break;
+                Intent moveObject = new Intent(MainActivity.this, MoveWithActivity.class);
+                moveObject.putExtra(MoveWithActivity.EXTRA_PERSON, person);
+                startActivity(moveObject);
+                break;
         }
     }
 }

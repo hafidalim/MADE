@@ -2,4 +2,5 @@
     <string name="app_name">My Application</string>
     <string name="pindah_activity">pindah activity</string>
     <string name="pindah_dengan_activity_denga_data">pindah dengan activity denga data</string>
+    <string name="move_data_object">move data object</string>
 </resources>
