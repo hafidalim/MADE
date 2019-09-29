@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
@@ -12,6 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="@string/pindah_activity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/pindah_dengan_activity_denga_data"
+        android:id="@+id/btnmoveData"/>
 
 
 </LinearLayout>
