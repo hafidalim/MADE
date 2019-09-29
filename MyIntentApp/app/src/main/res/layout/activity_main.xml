@@ -24,8 +24,16 @@
     <Button
         android:id="@+id/btnMoveObject"
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
         android:text="@string/move_data_object" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="dial number"
+        android:id="@+id/btnDialNumber"/>
 
 
 </LinearLayout>

@@ -3,12 +3,13 @@ package com.hafid.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnPindah, btnMoveData, btnMoveObject;
+    Button btnPindah, btnMoveData, btnMoveObject, btnDial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnMoveObject = findViewById(R.id.btnMoveObject);
         btnMoveObject.setOnClickListener(this);
+
+        btnDial = findViewById(R.id.btnDialNumber);
+        btnDial.setOnClickListener(this);
 
     }
 
@@ -51,6 +55,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent moveObject = new Intent(MainActivity.this, MoveWithActivity.class);
                 moveObject.putExtra(MoveWithActivity.EXTRA_PERSON, person);
                 startActivity(moveObject);
+                break;
+            case R.id.btnDialNumber:
+                String phoneNumber = "081234567890";
+                Intent intentDial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phoneNumber));
+                startActivity(intentDial);
                 break;
         }
     }
